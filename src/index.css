@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(69, 197, 247);
+}
+
+.page-title {
+  color: rgb(1, 24, 65);
+  margin: 1rem 0;
+}
+
+.main-container {
+  width: 40%;
+  margin: 3rem auto 1rem;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  gap: 5px;
+
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgb(1, 24, 65, 0.5);
+  background-color: rgb(184, 221, 253);
+}
+
+.todo-container {
+}
+
+.todo-form {
+}
+
+.input-container {
+  /* width: 20%; */
+}
+
+.todo-input,
+.todo-btn,
+.clear-items-btn {
+  font-size: 0.8rem;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.2s linear;
+}
+
+.todo-input {
+  width: 350px;
+  padding: 8px 1rem;
+  border: 1px solid rgb(83, 172, 250);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.todo-input:focus {
+  outline: none;
+  border: 1px solid rgb(3, 55, 144);
+}
+
+.todo-btn {
+  cursor: pointer;
+  color: aliceblue;
+  padding: 8px 12px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: rgb(1, 24, 65);
+  border: 1px solid rgb(1, 24, 65);
+}
+
+.todo-btn:hover {
+  color: white;
+  border: 1px solid rgb(9, 61, 151);
+  background-color: rgb(9, 61, 151);
+}
+
+.edit-btn {
+  border: 1px solid rgb(94, 2, 179);
+  background-color: rgb(94, 2, 179);
+}
+
+.edit-btn:hover {
+  border: 1px solid rgb(148, 66, 224);
+  background-color: rgb(148, 66, 224);
+}
+
+.todo-items-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* From Items component */
+.todo-items {
+  background-color: white;
+  margin-top: 10px;
+  padding: 5px;
+}
+/*end*/
+
+.clear-items-btn {
+  color: white;
+  cursor: pointer;
+  padding: 3px 12px;
+  border-radius: 3px;
+  margin-top: 20px;
+  /* color: rgb(201, 43, 122); */
+  color: rgb(233, 4, 119);
+  border: 1px solid transparent;
+  background-color: rgb(225, 208, 217);
+}
+
+.clear-items-btn:hover {
+  /* color: rgb(233, 4, 119); */
+  color: rgb(255, 3, 129);
+  background-color: rgb(244, 231, 238);
+  border: 1px solid rgb(233, 94, 163);
+}
