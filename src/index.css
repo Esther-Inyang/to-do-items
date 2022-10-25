@@ -14,7 +14,7 @@ body {
 .app-container {
   width: 80%;
   margin: 3rem auto 1rem;
-  padding: 1rem;
+  padding: 1.5rem 1.3rem 2.5rem;
   display: grid;
   place-items: center;
   gap: 5px;
