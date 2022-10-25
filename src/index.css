@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +8,13 @@
 
 body {
   background-color: rgb(69, 197, 247);
+  font-family: "Roboto", sans-serif;
 }
 
 .app-container {
   width: 80%;
   margin: 3rem auto 1rem;
-  padding: 1.3rem;
+  padding: 1rem;
   display: grid;
   place-items: center;
   gap: 5px;
@@ -35,24 +38,24 @@ body {
 
 /* from alert */
 .alert {
-  width: 80%;
-  padding: 2px;
-  font-size: 0.9rem;
+  width: 65%;
+  padding: 4px 0;
+  font-size: 0.7rem;
   font-weight: 600;
-  margin: 0 auto 3px;
+  margin: 0 auto 10px;
   text-align: center;
   border-radius: 15px;
   letter-spacing: 1px;
 }
 
 .alert-success {
-  /* color: rgb(94, 2, 179); */
-  color: rgb(3, 55, 144);
+  color: rgb(2, 82, 2);
+  background-color: rgb(131, 214, 5, 0.5);
 }
 
 .alert-danger {
-  color: rgb(126, 2, 2);
-  /* background-color: rgb(255, 44, 44); */
+  color: rgb(141, 9, 9);
+  background-color: rgba(253, 125, 125, 0.5);
 }
 
 .input-container {
@@ -75,10 +78,12 @@ body {
 
 .todo-input {
   width: 100%;
-  font-size: 0.7rem;
-  padding: 8px 1rem;
-  border: 1px solid rgb(69, 197, 247);
+  font-size: 0.71rem;
+  padding: 8px 0.5rem;
   border-radius: 5px;
+  color: rgb(3, 45, 116);
+  border: 1px solid transparent;
+  background-color: rgb(255, 254, 254);
 }
 
 .todo-input:focus {
@@ -88,9 +93,9 @@ body {
 
 .add-todo-input-btn,
 .edit-todo-input-btn {
-  width: 45%;
+  width: 40%;
   font-size: 0.7rem;
-  padding: 6px 10px;
+  padding: 6px;
 }
 
 .add-todo-input-btn {
@@ -109,13 +114,13 @@ body {
 }
 
 .edit-todo-input-btn {
-  border: 1px solid rgb(94, 2, 179);
-  background-color: rgb(94, 2, 179);
+  border: 1px solid rgb(84, 13, 146);
+  background-color: rgb(84, 13, 146);
 }
 
 .edit-todo-input-btn:hover {
-  border: 1px solid rgb(148, 66, 224);
-  background-color: rgb(148, 66, 224);
+  border: 1px solid rgb(133, 58, 202);
+  background-color: rgb(133, 58, 202);
 }
 
 .todo-list-container {
@@ -133,31 +138,31 @@ body {
   display: flex;
   gap: 10px;
   flex-direction: column;
-  background-color: rgb(235, 205, 220);
+  border-radius: 5px;
+  border: 2px solid rgb(247, 204, 231);
 }
 
 .item-container {
-  padding: 5px;
+  padding: 10px 15px;
   display: flex;
-  gap: 5px;
+  align-items: baseline;
+  gap: 1rem;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(245, 238, 242);
-}
-
-.item-index {
-  color: rgb(3, 55, 144);
-  margin-right: 3px;
+  border-radius: 5px;
+  background-color: rgb(254, 233, 246);
+  box-shadow: 0 1px 5px rgb(51, 51, 51, 0.5);
 }
 
 .todo-item {
   color: rgb(1, 24, 65);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .item-btns-container {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 
 .edit-icon,
@@ -166,19 +171,17 @@ body {
   height: 1.5rem;
   border: none;
   font-size: 0.7rem;
-  /* padding: 0 5px; */
   display: grid;
   place-items: center;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s linear;
   border: 1px solid transparent;
-  background-color: transparent;
 }
 
 .edit-icon {
   color: rgb(94, 2, 179);
-  background-color: rgb(245, 238, 242);
+  background-color: rgb(237, 217, 255);
 }
 
 .edit-icon:hover {
@@ -188,7 +191,7 @@ body {
 
 .delete-icon {
   color: rgb(200, 2, 101);
-  background-color: rgb(245, 238, 242);
+  background-color: rgb(254, 218, 218);
 }
 
 .delete-icon:hover {
@@ -218,16 +221,29 @@ body {
     width: 70%;
   }
 
+  .alert {
+    width: 45%;
+    font-size: 0.8rem;
+  }
+
+  .todo-input {
+    font-size: 0.8rem;
+  }
+
   .add-todo-input-btn,
   .edit-todo-input-btn {
     width: 20%;
+  }
+
+  .todo-item {
+    font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .app-container {
     width: 40%;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .page-title {
@@ -236,6 +252,11 @@ body {
 
   .todo-form {
     width: 95%;
+  }
+
+  .alert {
+    width: 40%;
+    font-size: 0.9rem;
   }
 
   .input-container {
@@ -265,8 +286,19 @@ body {
     gap: 20px;
   }
 
+  .todo-input,
+  .add-todo-input-btn,
+  .edit-todo-input-btn {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .item-container {
+    padding: 10px 15px;
+  }
+
   .todo-item {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .edit-icon,
